@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Financeiro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Relatório Financeiro</h1>
+    
+    <div class="container">
+        <p>Total de Despesas: R${{ total_despesas:.2f }}</p>
+        <p>Total de Receitas: R${{ total_receitas:.2f }}</p>
+        <p>Saldo: R${{ saldo:.2f }}</p>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>
